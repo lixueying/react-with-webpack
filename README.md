@@ -3,11 +3,9 @@ This repo is for react simple demo.
 You could download this repo and write your business code so that you don't need to build local env.
 
 # Quick Start
-`./startLocal.sh`
-It will start docker, you should do npm install inside docker.
-
-## Install dependencies
-Run `npm i` in docker
+It will start docker, will do npm install inside docker.
+`docker build --tag xiaoming .`
+`docker run --rm -d -p 3333:80 xiaoming`
 
 ## Dev mode
 Run `npm run start` to start development server in local
