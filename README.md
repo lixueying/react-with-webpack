@@ -4,8 +4,9 @@ You could download this repo and write your business code so that you don't need
 
 # Quick Start
 It will start docker, will do npm install inside docker.
-`docker build --tag xiaoming .`
-`docker run --rm -d -p 3333:80 xiaoming`
+`./startLocal.sh`
+`npm install`
+`npm start`
 
 ## Dev mode
 Run `npm run start` to start development server in local
@@ -14,7 +15,7 @@ Run `npm run start` to start development server in local
 Run `npm run build`
 
 ## localhost:8000
-- visit `localhost:8000` will connect to backend dev environment
+- visit `localhost:3000` will connect to backend dev environment
 
 ## Run webpack-bundle-analyzer
 - Run `npm run build` to build project

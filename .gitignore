@@ -1,2 +1,8 @@
-node_modules/
-.idea/
+.idea
+dist
+node_modules
+npm-debug.log
+coverage
+*.iml
+.DS_Store
+artifacts/
