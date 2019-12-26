@@ -1,0 +1,30 @@
+{
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx}",
+    "!**/node_modules/**",
+    "!**/test/**"
+  ],
+  "coverageReporters": [
+    "clover",
+    "html",
+    "text-summary"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "statements": 0,
+      "branches": 0,
+      "functions": 0,
+      "lines": 0
+    }
+  },
+  "moduleDirectories": [
+    "reports",
+    "node_modules"
+  ],
+  "modulePaths": [
+    "<rootDir>/src/"
+  ],
+  "verbose": true,
+  "rootDir": "../../"
+}

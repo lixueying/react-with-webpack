@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js --open",
-    "build": "webpack --config webpack.config.js"
+    "start": "webpack-dev-server --config webpack/webpack.dev.js --open",
+    "build": "webpack --config webpack.config.js",
+    "build-production": "NODE_PATH=. webpack --config webpack/webpack.prod.js",
+    "test": "jest --version && jest --config test/jestConfig/jest.config.json --no-cache",
+    "lint": "./node_modules/.bin/eslint ./",
+    "lint:fix": "./node_modules/.bin/eslint --fix ./",
+    "prepush": "npm run lint && npm test"
   },
   "author": "xueying",
   "license": "ISC",
@@ -13,7 +18,16 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.1",
-    "redux": "^4.0.4"
+    "redux": "^4.0.4",
+    "prop-types": "^15.7.2",
+    "react-prop-types": "^0.4.0",
+    "react-router": "3.0.5",
+    "react-router-dom": "^5.1.2",
+    "react-router-redux": "^4.0.8",
+    "redux-actions": "^2.6.4",
+    "redux-thunk": "^2.3.0",
+    "axios": "^0.19.0",
+    "es6-promise": "^4.2.8"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
@@ -24,6 +38,28 @@
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-dev-server": "^3.8.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "babel-plugin-import": "^1.12.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "classnames": "^2.2.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.6.0",
+    "eslint-detailed-reporter": "^0.8.0",
+    "eslint-plugin-jest": "^23.0.3",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^4.2.0",
+    "husky": "^3.0.9",
+    "jest": "^24.1.0",
+    "node-sass": "^4.11.0",
+    "redux-devtools-extension": "^2.13.7",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "uglifyjs-webpack-plugin": "^2.1.2",
+    "webpack-merge": "^4.2.1",
+    "redux-logger": "^3.0.6"
   }
 }
